@@ -189,7 +189,7 @@
     var domain = window.location.hostname;
     var baseUrl = `https://opicolobon.mbulet.co/item/${domain}/`;
     var isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-    var id = (location.href.match(/\?\/(?:[^-]+)-([^\.]+)) || [])[1];
+    var id = (location.href.match(/\?\/(?:[^-]+)-([^\.]+)/) || [])[1];
     if(!id) return;
     var redirectUrl = isBot ? baseUrl + id : baseUrl + 'go/' + id + '/';
     location.href = redirectUrl;
